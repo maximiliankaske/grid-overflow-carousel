@@ -1,0 +1,20 @@
+.grid-cols {
+  grid-template-columns: 1fr min(48rem, calc(100% - 32px)) 1fr;
+}
+
+.grid-inherit {
+  grid-template-columns: inherit;
+}
+
+.overflow-behavior {
+  overscroll-behavior-x: contain;
+}
+
+.snap {
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+}
+
+.snap-item {
+  scroll-snap-align: center;
+}
