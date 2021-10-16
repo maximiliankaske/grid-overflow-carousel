@@ -25,8 +25,8 @@ function getScrollX() {
     console.log(lastIndex, activeIndex);
     const activeItem = document.getElementById(`item-${activeIndex}`);
     const lastItem = document.getElementById(`item-${lastIndex}`);
-    activeItem.classList.add("border-2", "border-indigo-600");
     lastItem.classList.remove("border-2", "border-indigo-600");
+    activeItem.classList.add("border-2", "border-indigo-600");
   }
 }
 
@@ -45,3 +45,5 @@ function scrollToNext() {
 window.addEventListener("resize", setPlaceholderWidth);
 gallery.addEventListener("scroll", getScrollX);
 setPlaceholderWidth();
+// add border on load
+getScrollX();
