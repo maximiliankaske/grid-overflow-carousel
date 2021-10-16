@@ -7,23 +7,51 @@
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/feather-icons"></script>
     <link href="styles.css" rel="stylesheet" />
   </head>
   <body class="grid grid-cols">
     <div class="col-start-2 bg-gray-100 w-full p-8 space-y-6">
-      <div class="text-center max-w-lg mx-auto">
+      <div class="text-center max-w-xl mx-auto">
         <h1 class="text-4xl text-indigo-900 font-extrabold mb-4">
           Hello World
         </h1>
         <h3 class="text-lg text-gray-500 font-semibold">
-          This is a Scroll Snap Example with little JS and TailwindCSS with very
-          little custom classes waiting for v.3 to come with new features!
+          This is a Scroll Snap Example with little JavaScript, TailwindCSS with
+          utility classes and very little custom classes waiting for v.3 to come
+          with new snap features!
         </h3>
       </div>
-      <p class="text-gray-900 mt-6">
-        It is based on the Grid CSS behavior. Not much more to say. Just to make
-        sure that the line is wrapping correctly.
-      </p>
+      <ul class="grid grid-cols-2 max-w-lg mx-auto">
+        <li class="flex items-center">
+          <i
+            data-feather="check-circle"
+            class="h-4 w-4 text-green-500 mr-2"
+          ></i>
+          Tabs Navigation
+        </li>
+        <li class="flex items-center">
+          <i
+            data-feather="check-circle"
+            class="h-4 w-4 text-green-500 mr-2"
+          ></i>
+          Button-Arrow Navigation
+        </li>
+        <li class="flex items-center">
+          <i
+            data-feather="check-circle"
+            class="h-4 w-4 text-green-500 mr-2"
+          ></i>
+          Keyboard-Arrow Navigation
+        </li>
+        <li class="flex items-center">
+          <i
+            data-feather="check-circle"
+            class="h-4 w-4 text-green-500 mr-2"
+          ></i>
+          Click Navigation
+        </li>
+      </ul>
     </div>
     <div class="col-span-full relative">
       <div class="absolute inset-0 -z-10 grid grid-cols">
@@ -37,7 +65,7 @@
           grid grid-inherit
           overflow-behaviour
           no-scrollbar
-          py-16
+          py-6
         "
       >
         <div id="gallery-wrapper" class="flex w-60 mx-auto">
@@ -57,8 +85,11 @@
                 focus:ring-2
                 focus:ring-offset-2
                 focus:ring-indigo-600
+                font-bold
               "
-            ></button>
+            >
+              Techno
+            </button>
           </div>
           <div class="snap-item w-60">
             <button
@@ -76,8 +107,11 @@
                 focus:ring-2
                 focus:ring-offset-2
                 focus:ring-indigo-600
+                font-bold
               "
-            ></button>
+            >
+              Rock
+            </button>
           </div>
           <div class="snap-item w-60">
             <button
@@ -95,8 +129,11 @@
                 focus:ring-2
                 focus:ring-offset-2
                 focus:ring-indigo-600
+                font-bold
               "
-            ></button>
+            >
+              Classic
+            </button>
           </div>
           <div class="snap-item w-60">
             <button
@@ -114,8 +151,11 @@
                 focus:ring-2
                 focus:ring-offset-2
                 focus:ring-indigo-600
+                font-bold
               "
-            ></button>
+            >
+              Hip Hop
+            </button>
           </div>
           <div class="snap-item w-60">
             <button
@@ -133,8 +173,11 @@
                 focus:ring-2
                 focus:ring-offset-2
                 focus:ring-indigo-600
+                font-bold
               "
-            ></button>
+            >
+              R n' B
+            </button>
           </div>
           <div class="snap-item w-60">
             <button
@@ -152,8 +195,11 @@
                 focus:ring-2
                 focus:ring-offset-2
                 focus:ring-indigo-600
+                font-bold
               "
-            ></button>
+            >
+              Jazz
+            </button>
           </div>
           <div class="snap-item">
             <div id="placeholder"></div>
@@ -162,11 +208,27 @@
       </div>
     </div>
     <div class="col-start-2 bg-gray-100 h-96 w-full">
-      <div class="flex justify-between px-6">
-        <button onClick="scrollToPrev()">left</button>
-        <button onClick="scrollToNext()">right</button>
+      <div class="flex justify-between px-4">
+        <button onClick="scrollToPrev()" class="p-4 border rounded-full">
+          <i data-feather="arrow-left"></i>
+        </button>
+        <button onClick="scrollToNext()" class="p-4 border rounded-full">
+          <i data-feather="arrow-right"></i>
+        </button>
+      </div>
+      <div class="text-center">
+        <a
+          href="https://github.com/maximiliankaske/grid-overflow-carousel"
+          target="_blank"
+          rel="noopener"
+        >
+          <i data-feather="github" class="mx-auto"></i>
+        </a>
       </div>
     </div>
   </body>
+  <script>
+    feather.replace();
+  </script>
   <script type="text/javascript" src="index.js"></script>
 </html>
